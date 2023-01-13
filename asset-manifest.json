@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/know-your-neighborhood-ui-react/static/css/main.d149d01b.css",
+    "main.js": "/know-your-neighborhood-ui-react/static/js/main.9af33fee.js",
+    "static/js/787.f236d2fb.chunk.js": "/know-your-neighborhood-ui-react/static/js/787.f236d2fb.chunk.js",
+    "static/media/event2.jpg": "/know-your-neighborhood-ui-react/static/media/event2.1609a92d4327c59e863a.jpg",
+    "static/media/event1.jpg": "/know-your-neighborhood-ui-react/static/media/event1.9c9f15c5996be0ad26f1.jpg",
+    "static/media/aboutus.jpg": "/know-your-neighborhood-ui-react/static/media/aboutus.9899f0221178388fee08.jpg",
+    "static/media/contact.jpg": "/know-your-neighborhood-ui-react/static/media/contact.ff679cf870950fb4c3ab.jpg",
+    "static/media/navLogo.svg": "/know-your-neighborhood-ui-react/static/media/navLogo.63b2985b77ce1bf0b35793227ba23cfa.svg",
+    "static/media/certify.png": "/know-your-neighborhood-ui-react/static/media/certify.0958d81204aa79ce0fc1.png",
+    "static/media/register.png": "/know-your-neighborhood-ui-react/static/media/register.50c16d62d65cad0f0f16.png",
+    "static/media/goal.png": "/know-your-neighborhood-ui-react/static/media/goal.858e2dc494265e71d38b.png",
+    "static/media/exchange.png": "/know-your-neighborhood-ui-react/static/media/exchange.d05c07e66cbbcd9571f8.png",
+    "index.html": "/know-your-neighborhood-ui-react/index.html",
+    "main.d149d01b.css.map": "/know-your-neighborhood-ui-react/static/css/main.d149d01b.css.map",
+    "main.9af33fee.js.map": "/know-your-neighborhood-ui-react/static/js/main.9af33fee.js.map",
+    "787.f236d2fb.chunk.js.map": "/know-your-neighborhood-ui-react/static/js/787.f236d2fb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d149d01b.css",
+    "static/js/main.9af33fee.js"
+  ]
+}
