@@ -1,0 +1,34 @@
+.about-banner {
+  background-image: url("../img/aboutus.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+.event1 {
+  background-image: url("../img/event1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+.event2 {
+  background-image: url("../img/event2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+.child {
+  visibility: hidden;
+}
+
+.parent:hover .child {
+  visibility: visible;
+}
