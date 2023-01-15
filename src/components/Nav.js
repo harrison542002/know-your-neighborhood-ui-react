@@ -17,12 +17,12 @@ const Nav = ({ isAuthenticated }) => {
             <Link to={"/"} className="hover:text-lime-300">
               Home
             </Link>
-            <a href="" className="hover:text-lime-300">
+            <Link to={"/"} className="hover:text-lime-300">
               Stores
-            </a>
-            <a href="" className="hover:text-lime-300">
+            </Link>
+            <Link to={"/"} className="hover:text-lime-300">
               Services
-            </a>
+            </Link>
           </div>
         </div>
         <div className="my-auto mr-8">
