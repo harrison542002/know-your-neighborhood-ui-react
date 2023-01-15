@@ -15,14 +15,14 @@ import { AUTHENTICATED } from "./const";
 function App() {
   const [authenticated, setAuthenticated] = useState(false);
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Nav
         authentication={(status) => setAuthenticated(status)}
         isAuthenticated={authenticated}
       />
       <Routes>
         <Route
-          path="/"
+          path={"/"}
           element={
             <Home
               authentication={(status) => setAuthenticated(status)}
