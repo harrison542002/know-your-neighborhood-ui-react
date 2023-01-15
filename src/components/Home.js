@@ -3,15 +3,37 @@ import Goal from "../resources/img/goal.png";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { AUTHENTICATED } from "../const";
+import { motion, useScroll } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useAnimation } from "framer-motion";
 const Home = ({ isAuthenticated, authentication }) => {
+  const { scrollYProgress } = useScroll();
+  const { ref, inView } = useInView();
+  const animation = useAnimation();
+
   useEffect(() => {
     authentication(localStorage.getItem(AUTHENTICATED) === "false");
-  }, []);
+    if (inView) {
+      animation.start({
+        x: 0,
+        transition: {
+          type: "spring",
+          duration: 1,
+          bounce: 0.3,
+        },
+      });
+    }
+    if (!inView) {
+      animation.start({
+        x: "-100vw",
+      });
+    }
+  }, [inView]);
   return (
     <>
       <div className="hero-banner">
         <div className="w-100 p-20 bg-gradient-to-r from-lime-200 to-lime-600">
-          <div className="container m-auto text-center">
+          <motion.div className="container m-auto text-center">
             <h1 className="header text-5xl w-100 text-gray-900 font-extrabold m-5">
               Curious About Your NEIGHBOURHOOD
             </h1>
@@ -28,7 +50,7 @@ const Home = ({ isAuthenticated, authentication }) => {
                 Start Today With KN To INCREASE YOUR PRODUCTIVITY
               </Link>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
       <div className="lg:grid lg:grid-cols-2">
@@ -59,11 +81,11 @@ const Home = ({ isAuthenticated, authentication }) => {
           <div className="w-40 h-40 animate-pulse bg-lime-500 rounded-md shadow-lg top-20 absolute lg:left-72"></div>
         </div>
       </div>
-      <div className="lg:grid lg:grid-cols-2 bg-lime-300 ">
+      <div className="lg:grid lg:grid-cols-2 bg-lime-300" ref={ref}>
         <div className="px-10 py-5 m-auto">
           <img src={Goal} className="w-64" alt="accurate" />
         </div>
-        <div className="pt-8 pl-10">
+        <motion.div animate={animation} className="pt-8 pl-10">
           <h1 className="text-2xl header">
             <b>Accurate</b>
           </h1>
@@ -73,7 +95,7 @@ const Home = ({ isAuthenticated, authentication }) => {
             1000 of cusumers of KN give priceless feedbacks on the evaluation of
             KN.
           </p>
-        </div>
+        </motion.div>
       </div>
     </>
   );
